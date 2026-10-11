@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0a0a0f;
+    background-image: radial-gradient(ellipse at top, rgba(109, 40, 217, 0.15), transparent 50%),
+      radial-gradient(ellipse at bottom, rgba(245, 158, 11, 0.05), transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl;
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+  }
+
+  .text-glow-purple {
+    text-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-forge-primary to-indigo-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-glow;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d28d9;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
